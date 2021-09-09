@@ -18,7 +18,7 @@ public class TwoSum {
     }
 
 
-    public static int[] twoSumHashSet(int[] nums, int target) {
+    public static int[] twoSumHashMap(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int n = nums.length;
 
@@ -47,6 +47,6 @@ public class TwoSum {
         int target = sc.nextInt();
 
         System.out.println(Arrays.toString(twoSumNaive(nums, target)));
-        System.out.println(Arrays.toString(twoSumHashSet(nums, target)));
+        System.out.println(Arrays.toString(twoSumHashMap(nums, target)));
     }
 }
