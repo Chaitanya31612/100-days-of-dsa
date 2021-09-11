@@ -4,27 +4,22 @@ import java.util.Scanner;
 
 public class PascalsTriangle {
     public static List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> list = new ArrayList<>();
+        List<List<Integer>> rowsList = new ArrayList<>();
 
-        if(numRows == 1) {
-            ArrayList<Integer> temp = new ArrayList<>();
-            temp.add(1);
-            list.add(temp);
+        List<Integer> row = new ArrayList<>();
 
-            return list;
-        }
-        if (numRows == 2) {
-            ArrayList<Integer> temp = new ArrayList<>();
-            temp.add(1);
-            list.add(temp);
-//            temp.add(1);
-//            temp.add(1);
-            list.add(temp);
+        for(int i = 0; i < numRows; i++) {
+            row.add(0, 1);
 
-            return list;
+            for(int j = 1; j < row.size() - 1; j++) {
+                row.set(j, row.get(j) + row.get(j + 1));
+            }
+
+//            rowsList.add(row); // this will reference the final value of row and not the intermediate one
+            rowsList.add(new ArrayList<>(row));
         }
 
-        return list;
+        return rowsList;
     }
 
     public static void main(String[] args) {
