@@ -1,3 +1,5 @@
+/* explanation - https://leetcode.com/problems/range-sum-of-bst/discuss/1495551/java-easy-solution*/
+
 public class RangeSum {
     static int sum = 0;
     public static int rangeSumBST(TreeNode root, int low, int high) {

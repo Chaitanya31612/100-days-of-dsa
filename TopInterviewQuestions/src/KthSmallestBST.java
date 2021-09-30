@@ -1,3 +1,7 @@
+/*
+* explanation - https://leetcode.com/problems/kth-smallest-element-in-a-bst/discuss/1493372/easy-java-recursive-solution
+* */
+
 import java.util.Scanner;
 
 public class KthSmallestBST {

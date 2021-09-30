@@ -1,3 +1,8 @@
+/*
+*
+* explanation - https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/discuss/1495234/easy-java-recursive-solution
+* */
+
 public class ArrayToBST {
     public static TreeNode sortedArrayToBST(int[] nums) {
         return sortedArrayToBSTUtil(nums, 0, nums.length - 1);

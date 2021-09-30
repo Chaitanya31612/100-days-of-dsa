@@ -1,5 +1,9 @@
 /*https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/*/
 
+/*
+* explanation - https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/discuss/1495846/java-easy-explanation-with-diagram
+* */
+
 import java.util.ArrayList;
 
 public class BSTtoGST {

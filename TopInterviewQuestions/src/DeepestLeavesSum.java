@@ -1,3 +1,8 @@
+/*
+* https://leetcode.com/problems/deepest-leaves-sum/
+* explanation - https://leetcode.com/problems/deepest-leaves-sum/discuss/1495411/easy-java-recursive-solution
+* */
+
 public class DeepestLeavesSum {
     static int sum;
     public static int sumOfLeaves(TreeNode root) {
