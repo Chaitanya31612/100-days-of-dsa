@@ -1,31 +1,48 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class MinSwaps {
 
-    public static int minSwaps(int nums[]) {
-        int n = nums.length;
-        int[][] graph = new int[n][n];
-
+    // idea is to first sort the list (value with index) then count number of swaps that are required to bring it back to normal
+    static class Pair {
+        int value;
+        int index;
+        Pair(int value, int index) {
+            this.value = value;
+            this.index = index;
+        }
+    }
+    public static int minSwaps(int[] arr) {
+        int n = arr.length;
+        ArrayList<Pair> list = new ArrayList<>();
         for(int i = 0; i < n; i++) {
-            int count = 0;
-            for(int c = 0; c < n; c++) {
-                if(nums[c] < nums[i])
-                    count++;
+            list.add(new Pair(arr[i], i));
+        }
+        // comparator for sorting the array in ascending order
+        Comparator<Pair> c = new Comparator<Pair>() {
+            @Override
+            public int compare(Pair o1, Pair o2) {
+                return o1.value - o2.value;
             }
-            if(i != count)
-                graph[i][count] = 1;
+        };
+
+        Collections.sort(list, c);
+
+        // count is the number of swaps required
+        int count = 0;
+        // then traverse the list and check whether index after sorting is equal to initial index, if not then swap it
+        for(int i = 0; i < n; i++) {
+            if(list.get(i).index == i)
+                continue;
+
+            Collections.swap(list, i, list.get(i).index);
+            count++;
+            i--; // to again check until the index becomes equal to i
         }
 
-        int ans = 0;
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j < n; j++) {
-                if(graph[i][j] == 1 && graph[j][i] == 1) {
-                    ans++;
-                }
-            }
-        }
-
-        return ans / 2;
+        return count;
     }
 
     public static void main(String[] args) {
