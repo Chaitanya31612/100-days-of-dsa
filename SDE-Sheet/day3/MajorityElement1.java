@@ -34,7 +34,7 @@ public class MajorityElement1 {
 
   // best approach
   // Moore voting algo
-  public int majorityElement(int[] nums) {
+  public static int majorityElement(int[] nums) {
     int count = 0, candidate = 0;
 
     for (int num : nums) {
