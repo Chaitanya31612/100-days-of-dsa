@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.*;
 
 // https://leetcode.com/problems/reverse-pairs/
+// https://leetcode.com/problems/reverse-pairs/discuss/1535812/Java-easy-solution-with-intuition-oror-Merge-sort-approach
 
 public class ReversePair {
     public static int reversePair(int[] nums) {
