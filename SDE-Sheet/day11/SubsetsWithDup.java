@@ -1,20 +1,28 @@
 package day11;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Arrays;
 import java.util.List;
 
 public class SubsetsWithDup {
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        List<List<Integer>> subsets = new ArrayList<>();
+        Arrays.sort(nums);
+        subsetUtil(subsets, new ArrayList<>(), nums, 0, nums.length);
+        return subsets;
+    }
+
+    public void subsetUtil(List<List<Integer>> list, List<Integer> temp,int[] nums, int start, int n) {
+        list.add(new ArrayList<>(temp));
+        for(int i = start; i <n; i++) {
+            if(i > start && nums[i] == nums[i-1])
+                continue;
+            temp.add(nums[i]);
+            subsetUtil(list, temp, nums, i + 1, n);
+            temp.remove(temp.size() - 1);
+        }
+    }
     public static void main(String[] args) {
-        List<Integer> l1 = new ArrayList<>();
-        l1.add(2);
-        l1.add(3);
-        List<Integer> l2 = new ArrayList<>();
-        l2.add(2);
-        l2.add(3);
-        HashSet<List<Integer>> set = new HashSet<>();
-        set.add(l1);
-        set.add(l2);
-        System.out.println(set);
+
     }
 }
