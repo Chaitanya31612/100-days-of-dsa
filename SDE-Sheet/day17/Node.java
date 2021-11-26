@@ -1,10 +1,10 @@
 package day17;
 
 public class Node {
-    int data;
-    Node left, right;
+    public int data;
+    public Node left, right;
 
-    Node(int item)
+    public Node(int item)
     {
         data = item;
         left = right = null;
