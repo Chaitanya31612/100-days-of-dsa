@@ -1,4 +1,5 @@
-import java.util.Arrays;
+package DP_2D;
+
 import java.util.Scanner;
 
 //https://www.codingninjas.com/codestudio/problems/ninja-s-training_3621003

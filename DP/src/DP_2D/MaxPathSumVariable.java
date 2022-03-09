@@ -1,3 +1,5 @@
+package DP_2D;
+
 import java.util.Arrays;
 // https://www.codingninjas.com/codestudio/problems/maximum-path-sum-in-the-matrix_797998
 public class MaxPathSumVariable {

@@ -1,3 +1,5 @@
+package DP_2D;
+
 import java.util.Arrays;
 // https://www.codingninjas.com/codestudio/problems/triangle_1229398
 public class Triangle {

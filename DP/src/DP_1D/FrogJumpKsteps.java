@@ -1,3 +1,5 @@
+package DP_1D;
+
 public class FrogJumpKsteps {
 
     public static int frogJump(int n, int k, int[] heights) {

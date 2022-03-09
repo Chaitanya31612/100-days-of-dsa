@@ -1,3 +1,5 @@
+package DP_1D;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

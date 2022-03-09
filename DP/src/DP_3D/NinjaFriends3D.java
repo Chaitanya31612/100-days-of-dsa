@@ -1,3 +1,5 @@
+package DP_3D;
+
 import java.util.Arrays;
 // https://www.codingninjas.com/codestudio/problems/ninja-and-his-friends_3125885?
 // https://www.youtube.com/watch?v=QGfn7JeXK54
