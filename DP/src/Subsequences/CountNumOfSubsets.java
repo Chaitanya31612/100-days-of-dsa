@@ -47,5 +47,10 @@ public class CountNumOfSubsets {
         return countWays(n-1, num, tar, dp);
     }
 
-
+    public static void main(String[] args) {
+        int num[] = {0,13,18,14,15,19,21,2,8,1};
+        int tar = 75;
+        System.out.println(findWays(num, tar));
+        System.out.println(countWaysDP(num, tar));
+    }
 }
